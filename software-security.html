@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Security | Code and Consequences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-mark">C&C</span>
+        <div>
+          <p class="logo-title">Code and Consequences</p>
+          <p class="logo-subtitle">Software security with consequences</p>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="software-security.html" class="active">Software Security</a>
+        <a href="patch-corner.html">Patch's Corner</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Collection 01</p>
+          <h1>Software Security Primer</h1>
+          <p>
+            Adapted from "Software Security: Why We Keep Shooting Ourselves in the Foot" and Patch Murphy's own late-night war stories.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="https://gamma.app/docs/Software-Security-Why-We-Keep-Shooting-Ourselves-in-the-Foot-o3p62tknvmus4jt" target="_blank" rel="noopener">View the original deck</a>
+            <a class="btn ghost" href="https://www.youtube.com/" target="_blank" rel="noopener">Watch the companion video</a>
+          </div>
+        </div>
+        <img src="images/section_header.png" alt="Software security abstract" />
+      </section>
+
+      <section id="origin" class="section detailed">
+        <div class="section-heading">
+          <p class="eyebrow">Lesson 01</p>
+          <h2>Test the weird stuff first.</h2>
+          <p>
+            A programming 101 assignment taught Patch that happy paths rarely fail; it's the professor typing "maybe" that wrecks your demo.
+          </p>
+        </div>
+        <article class="story">
+          <h3>The 20 Questions disaster</h3>
+          <p>
+            The class built guess-a-thing games. Nobody enforced the question limit. Inputs were free-form. Demo day became a live-fire exercise in missing constraints: infinite loops, negative numbers, and one spectacular crash when the professor typed "maybe" instead of "yes".
+          </p>
+          <p>
+            <strong>Takeaway:</strong> Spell out constraints. Write tests for upper bounds. Validate vocabulary. If your user can type it, your code should expect it.
+          </p>
+          <ul class="story-list">
+            <li>Budget 30% of build time for destructive testing.</li>
+            <li>List every assumption a user could break.</li>
+            <li>Let automation hammer those assumptions nightly.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="network" class="section detailed alt">
+        <div class="section-heading">
+          <p class="eyebrow">Lesson 02</p>
+          <h2>Never trust the client.</h2>
+          <p>Network programming lab, week one. Coffee hits desk. Chalkboard screams the mantra.</p>
+        </div>
+        <article class="story">
+          <h3>Malformed everything</h3>
+          <p>
+            Learning sockets in C meant staring down packet captures. The professor spoofed source addresses, overflowed buffers, and swapped credentials mid-session simply because the client said it could. Every demo ended with "the client lies; verify anyway".
+          </p>
+          <p>
+            <strong>Takeaway:</strong> Validate at every layer. Authenticate with context. Enforce authorization on the server, not the UI.
+          </p>
+          <ul class="story-list">
+            <li>Assume inputs are hostile, even if they come from your own app.</li>
+            <li>Log and throttle anomalies before they take you down.</li>
+            <li>Document trust boundaries on an architecture diagram.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="automation" class="section detailed">
+        <div class="section-heading">
+          <p class="eyebrow">Lesson 03</p>
+          <h2>Automate anything that steals focus.</h2>
+          <p>Dot-com era deployments took ten minutes. Scripts rescued sanity and, accidentally, security.</p>
+        </div>
+        <article class="story">
+          <h3>The J2EE wait game</h3>
+          <p>
+            Deploying to early app servers meant staring at log files for "Server started". Patch wrote scripts to tail logs, grep for success, and play a sound when deployments finished. Fewer mistakes, fewer 3 AM pages.
+          </p>
+          <p>
+            <strong>Takeaway:</strong> Automation isn't just speed—it's consistency. Consistency is security.
+          </p>
+          <ul class="story-list">
+            <li>Automate deploy verification before automating deploys.</li>
+            <li>Instrument scripts to alert when something drifts.</li>
+            <li>Version-control every helper script like production code.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section resources-callout">
+        <div>
+          <h2>Downloadable references coming soon.</h2>
+          <p>
+            Check back for checklists, threat-model worksheets, and sample repos as the series expands. Want something specific? Ping Patch.
+          </p>
+          <a class="btn primary" href="mailto:hello@codeandconsequences.com">Request a resource</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="logo-title">Code and Consequences</p>
+        <p>Patch Murphy's software security guard post.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X (Patch)</a>
+        <a href="mailto:hello@codeandconsequences.com">Contact</a>
+      </div>
+      <p class="tiny">© <span id="year"></span> Code and Consequences.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

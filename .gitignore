@@ -1,0 +1,20 @@
+# System files
+.DS_Store
+
+# Dependencies
+node_modules/
+dist/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Content symlink - never commit the actual content folder
+content
+
+# Local workspace folders (if created directly in repo)
+drafts/
+notes/
+scratch/
+*.local.*

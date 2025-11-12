@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patch's Corner | Code and Consequences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-mark">C&C</span>
+        <div>
+          <p class="logo-title">Code and Consequences</p>
+          <p class="logo-subtitle">Software security with consequences</p>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="software-security.html">Software Security</a>
+        <a href="patch-corner.html" class="active">Patch's Corner</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Patch's Corner</p>
+          <h1>Meet the laziest security guard in software.</h1>
+          <p>
+            Patch Murphy is a fictional composite of every engineer who learned security by trying to avoid pager duty.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="https://www.youtube.com/" target="_blank" rel="noopener">Watch on YouTube</a>
+            <a class="btn ghost" href="https://x.com/" target="_blank" rel="noopener">Follow Patch on X</a>
+          </div>
+        </div>
+        <img src="images/hero.png" alt="Patch Murphy" />
+      </section>
+
+      <section class="section quote">
+        <blockquote>
+          “I wasn't trying to build secure software. I was trying to build software that didn't wake me up at 3 AM.”
+        </blockquote>
+        <p class="tiny">— Patch Murphy</p>
+      </section>
+
+      <section class="section video-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Latest uploads</p>
+          <h2>Security rants that double as tutorials.</h2>
+        </div>
+        <div class="grid three">
+          <article class="video-tile">
+            <div class="video-frame ratio">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3>Why Edge Cases Bite</h3>
+            <p>Patch walks through the 20 Questions crash and the test cases it inspired.</p>
+          </article>
+          <article class="video-tile">
+            <div class="video-frame ratio">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3>Never Trust the Client</h3>
+            <p>Packet spoofing dramatized with doodles, plus mitigation strategies.</p>
+          </article>
+          <article class="video-tile">
+            <div class="video-frame ratio">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 3" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3>Automation Saved My Sleep</h3>
+            <p>Dot-com scripts, alert sounds, and why boredom births bugs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section persona">
+        <div class="section-heading">
+          <p class="eyebrow">The bit</p>
+          <h2>Why Patch exists.</h2>
+        </div>
+        <div class="persona-grid">
+          <article>
+            <h3>Voice & tone</h3>
+            <p>Dry humor, analogies from the 90s, and the occasional "trust but verify" rant.</p>
+          </article>
+          <article>
+            <h3>Formats</h3>
+            <p>Short videos, illustrated explainers, and long-form guides with footnotes.</p>
+          </article>
+          <article>
+            <h3>Channels</h3>
+            <p>YouTube, X, newsletter (later), and cameo quotes across the site.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="logo-title">Code and Consequences</p>
+        <p>Patch Murphy's software security guard post.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X (Patch)</a>
+        <a href="mailto:hello@codeandconsequences.com">Contact</a>
+      </div>
+      <p class="tiny">© <span id="year"></span> Code and Consequences.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

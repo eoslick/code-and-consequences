@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | Code and Consequences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-mark">C&C</span>
+        <div>
+          <p class="logo-title">Code and Consequences</p>
+          <p class="logo-subtitle">Software security with consequences</p>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="software-security.html">Software Security</a>
+        <a href="patch-corner.html">Patch's Corner</a>
+        <a href="resources.html" class="active">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Resource Library</p>
+          <h1>Blueprints, checklists, and code samples.</h1>
+          <p>
+            This is the structured hub that will house methodologies beyond security—design patterns, DDD, AI-assisted workflows, and more.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="mailto:hello@codeandconsequences.com">Request early access</a>
+            <a class="btn ghost" href="https://www.youtube.com/" target="_blank" rel="noopener">Watch Patch build</a>
+          </div>
+        </div>
+        <img src="images/section_header.png" alt="Resource banner" />
+      </section>
+
+      <section class="section resource-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Collections</p>
+          <h2>What ships next.</h2>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <img src="images/gang_of_four.png" alt="Design patterns icon" />
+            <h3>Gang of Four Playbook</h3>
+            <p>Mini case studies showing when patterns help, when they hurt, and how to test them.</p>
+            <span class="tag">In progress</span>
+          </article>
+          <article class="card">
+            <img src="images/domain_driven_design.png" alt="DDD icon" />
+            <h3>Domain-Driven Design Kits</h3>
+            <p>Context maps, sample domains, and facilitation scripts with Patch's commentary.</p>
+            <span class="tag">Sketching</span>
+          </article>
+          <article class="card">
+            <img src="images/ai_assisted_programming.png" alt="AI icon" />
+            <h3>AI-Assisted Engineering</h3>
+            <p>Prompt recipes, red-team tests, and governance templates for copilots.</p>
+            <span class="tag">Research</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section resources-callout">
+        <div>
+          <h2>Need a specific artifact?</h2>
+          <p>Threat models, tabletop scripts, onboarding checklists—tell us what helps your team most.</p>
+          <a class="btn primary" href="mailto:hello@codeandconsequences.com">Send a request</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="logo-title">Code and Consequences</p>
+        <p>Patch Murphy's software security guard post.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X (Patch)</a>
+        <a href="mailto:hello@codeandconsequences.com">Contact</a>
+      </div>
+      <p class="tiny">© <span id="year"></span> Code and Consequences.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
