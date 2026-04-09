@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spaghetti Skills | Code and Consequences</title>
+    <meta
+      name="description"
+      content="From spaghetti code to API sprawl to agent workflows, Spaghetti Skills explains how modern software complexity has evolved into an AI maintenance and evaluation problem."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/spaghetti-skills.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/index.html" aria-label="Code and Consequences home">
+        <span class="logo-mark">C&C</span>
+        <div>
+          <p class="logo-title">Code and Consequences</p>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="/software-security.html">Software Security</a>
+        <a href="/patch-corner.html">Patch's Corner</a>
+        <a href="/resources.html" class="active">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero article-hero">
+        <div>
+          <p class="eyebrow">Article 01</p>
+          <h1>Spaghetti Skills</h1>
+          <p class="lead">
+            We used to fear spaghetti code because the mess was visible. Now the same tangle has spread across APIs, schedulers, wrappers, prompts, and agent workflows.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="/resources.html">Back to Resources</a>
+            <a class="btn ghost" href="https://www.youtube.com/channel/UCmwpVcnu1xoKUONJfnOeGPA" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
+        </div>
+        <img src="/images/articles/spaghetti-skills/hero.png" alt="Spaghetti code evolving into APIs and tangled AI workflows" />
+      </section>
+
+      <section class="section article-shell">
+        <div class="article-meta">
+          <span class="tag">AI-Assisted Engineering</span>
+          <span class="tag">Architecture</span>
+          <span class="tag">Operations</span>
+        </div>
+
+        <article class="article-body">
+          <p>
+            Spaghetti code is a warning sign. It means the implementation has veered from or never had any design or coding standards in place. A codebase with duplicate code, conditional statements that span screens, functions that serve way too many purposes, or branching statements with no logic are signs of spaghetti code. Teams learned to fear it because they had to live inside it, trace it, and patch it. The mess sat in plain view, like that pasta dish with spaghetti hanging over the edge ready to cause a massive red stain on your brand new shirt.
+          </p>
+
+          <figure class="article-figure float-right">
+            <img src="/images/articles/spaghetti-skills/eating-pasta.png" alt="Patch Murphy at a workstation with spaghetti on the desk, lap, and floor" />
+            <figcaption>The original mess was local. You could still see it.</figcaption>
+          </figure>
+
+          <p>
+            Software engineers learned how to leverage design principles like SOLID, DRY, and design patterns to better organize code and make it easier to maintain and easier to extend. Design strategies such as hexagonal architecture, event-driven programming, and event sourcing led to cleaner codebases with structure. That structure created real leverage. It also created the confidence to scale software systems faster than many teams could govern them.
+          </p>
+
+          <p>
+            When cloud compute started increasing, that architecture led to API-first programming and microservice architecture. Systems now called into other systems, and the integration problem moved to the foreground. Instead of operating one software product or a tight suite of tools, companies began relying on many third parties. Data integration became the new pain point, and orchestration tools rushed in to manage the flow.
+          </p>
+
+          <h2>From Spaghetti Code to Spaghetti Calls</h2>
+          <p>
+            The original spaghetti code problem was local. The complexity lived in the source tree, and the failure modes stayed close to the team that wrote them. You could inspect the classes, trace the execution path, and identify the engineer or team responsible for the damage. The problem was painful, but it had a shape.
+          </p>
+
+          <p>
+            Microservice software architecture changed the location of that complexity. A single user action can now cross front-end code, backend services, identity providers, cloud functions, data stores, observability systems, billing tools, and third-party APIs. In theory, ports and adapters could have kept this clean. In practice, data modeling drifted, delivery pressure increased, and the pressure cooker for speed got turned on.
+          </p>
+
+          <p>
+            This created a supply chain problem that reaches beyond open source packages. We no longer depend on code we import and build alone. We depend on behavior we rent, call, and hope remains stable. When that behavior drifts, rate-limits, or changes shape, our software changes with it.
+          </p>
+
+          <figure class="article-figure full-bleed">
+            <img src="/images/articles/spaghetti-skills/automation-chaos.png" alt="Tangled spaghetti and cables spreading across screens, API blocks, and schedulers" />
+            <figcaption>What used to be bad code became bad coordination across rented behavior.</figcaption>
+          </figure>
+
+          <h2>Skills Are the New Integration Surface</h2>
+          <p>
+            Artificial intelligent systems are now repeating that pattern at a higher layer. We are no longer dealing with code alone, or even with distributed API calls alone. We are building workflows out of agents, prompts, tools, retrieval layers, model gateways, packaged skills, cron jobs, schedulers, and the scripts that glue them together. The old plate of spaghetti has become a bowl of moving parts, and many teams still call it abstraction.
+          </p>
+
+          <p>
+            Agentic systems wrap this problem in softer language. A skill sounds contained, portable, and easy to reason about. In practice, many skills are bundles of prompts, tool permissions, API calls, output assumptions, retrieval paths, and model behavior. That is not a skill in the classical engineering sense. It is an integration surface with branding.
+          </p>
+
+          <p>
+            A workflow built from agents and skills can become harder to reason about than the code it was meant to simplify. One agent reshapes data for another. A prompt assumes a schema from a tool response. A skill expects a model to infer a missing field, then a fallback path calls a second API that returns a different structure. A cron job fires at 2 a.m., kicks off a wrapper script, and pushes stale context into the next stage before anyone is awake to see it. By the time a downstream evaluator marks the result as correct, the workflow has become a chain of guesses dressed as design.
+          </p>
+
+          <h2>The New Supply Chain Nightmare</h2>
+          <p>
+            Traditional software supply chain conversations focused on known components such as language libraries and a manageable set of company-owned dependencies. Even as N-tier architecture expanded the stack, the external calls and library surface area remained understandable to most developers. When the shift to microservices and API-first took hold, that understanding started to break down without appropriate tooling. AI systems now add a layer that is harder to see and harder to govern.
+          </p>
+
+          <p>
+            The supply chain now includes foundation models, prompt templates, hidden system instructions, tool wrappers, retrieval pipelines, orchestration frameworks, scheduled jobs, shell scripts, and evaluation sets that may or may not resemble production. Each layer can drift. Each layer can fail on its own clock.
+          </p>
+
+          <p>
+            The chain of responsibility broke with it. When a system calls a non-deterministic control, there is a whole level of verification that has to take place. This is not just an error-handling moment. This is not just software being complex. It is a governance problem hiding inside an architecture problem.
+          </p>
+
+          <figure class="article-figure float-left">
+            <img src="/images/articles/spaghetti-skills/patch-lost.png" alt="Patch Murphy inspecting a tangled workflow knot made of prompts, APIs, and cables" />
+            <figcaption>Once the workflow starts reasoning and calling tools, ownership gets blurry fast.</figcaption>
+          </figure>
+
+          <p>
+            The questions change as a result. We used to ask whether a package was vulnerable or out of date. Now we also need to ask which model version produced the behavior, which prompt revision shaped the answer, which retrieval step changed the context, and which evaluator approved an output that should have failed. If a team cannot answer those questions, it does not have an AI system under control. It has operational debt behind a chat window.
+          </p>
+
+          <h2>The Maintenance Problem Nobody Wants to Own</h2>
+          <p>
+            Spaghetti skills create a maintenance problem that most teams underestimate. Code at least aims for determinism, even when it fails. Agent workflows can produce different outputs from the same request because of model changes, token limits, retrieval variance, timing, tool availability, scheduled task timing, and drift in prompts or surrounding context. Teams are not maintaining code paths alone. They are maintaining behavior under uncertainty.
+          </p>
+
+          <p>
+            That changes the nature of review, support, and root-cause analysis. Who owns a skill when one team wrote the prompt, another built the tool, a third added the cron job, and a vendor runs the agent runtime? How do you review a change when the function lives in code, configuration, scripts, schedules, and model behavior at the same time? How do you debug a failure when the system does not crash, but instead returns a polished wrong answer that slips past a busy operator?
+          </p>
+
+          <p>
+            Many organizations avoid these questions because the answers force hard tradeoffs. Ownership becomes political, traceability takes time, and maintenance exposes the real cost of convenience. So teams keep adding more layers, more wrappers, and more skills until the workflow becomes too useful to remove and too fragile to trust. That is the same path that created prior generations of software debt, and now the behavior looks intelligent while the operating model decays.
+          </p>
+
+          <h2>Without Evaluation Loops, You Are Flying Blind</h2>
+          <p>
+            The deepest problem is not complexity alone. Software has always been complex, and mature teams know how to manage some level of sprawl. The real risk is unmanaged complexity without evaluation loops. Teams are wiring together agents, tools, prompts, and skills, then calling the system production ready because a demo worked a handful of times.
+          </p>
+
+          <p>
+            Demos prove theater, not control. Plausible output is not reliability, and user delight in the first week is not evidence of durability in the sixth month. Without structured evaluation, teams cannot tell whether the workflow is improving, drifting, or failing in ways that hide behind fluent prose. They are steering by windshield glare.
+          </p>
+
+          <div class="article-callout">
+            <h3>Evaluation has to cover the real operating surface.</h3>
+            <ul class="story-list">
+              <li>Consistency across repeated runs</li>
+              <li>Accuracy against known-good outcomes</li>
+              <li>Robustness to malformed or adversarial inputs</li>
+              <li>Failure handling when tools return slow, partial, or incorrect data</li>
+              <li>Behavior changes across model, prompt, skill, script, and schedule revisions</li>
+            </ul>
+          </div>
+
+          <p>
+            This is not governance theater. It is the minimum discipline required to run a non-deterministic system with a straight face.
+          </p>
+
+          <h2>The False Comfort of Abstraction</h2>
+          <p>
+            Part of the reason spaghetti skills spread so fast is that the language feels clean. Tool, skill, agent, workflow: each word suggests a stable boundary with a clear role. But a label is not a boundary, and a reusable prompt is not an interface. A framework name can hide complexity, but it cannot erase it.
+          </p>
+
+          <p>
+            The industry made this mistake with APIs and microservices. Leaders saw neat diagrams and assumed they were looking at modular systems. In many cases, they were looking at distributed coupling with better branding and a larger blast radius. Agent platforms are replaying that pattern with one more layer of distance between action and accountability.
+          </p>
+
+          <h2>What Disciplined Teams Will Do</h2>
+          <p>
+            The answer is not to avoid AI, agents, or skills. The answer is to treat them as engineering artifacts that need versioning, ownership, test coverage, and operational traceability. Teams that do this well will version prompts, skills, tools, scripts, schedules, and model choices together. They will record lineage for important workflow decisions and build evaluation suites before they call a workflow production ready.
+          </p>
+
+          <p>
+            They will also cut unnecessary handoffs between agents and avoid hidden tool chains that force downstream components to guess at upstream intent. They will favor explicit interfaces over prompt-based improvisation and assign a clear owner to every production skill and workflow. Most of all, they will stop confusing composability with maintainability. A system can be easy to assemble and still be a nightmare to run.
+          </p>
+
+          <h2>The Next Mess Will Be Harder to Untangle</h2>
+          <p>
+            Spaghetti code was painful, but it remained open to inspection. Spaghetti APIs made systems more distributed and harder to debug. Spaghetti skills take that same entanglement and add hidden context, shifting model behavior, uncertain ownership, and non-deterministic outcomes. That is not a small step in complexity. It is a break in operating discipline.
+          </p>
+
+          <p>
+            We are building systems where business logic no longer lives in code alone. It is spread across prompts, hosted models, retrieval pipelines, tool contracts, orchestration frameworks, cron jobs, glue scripts, and evaluation assumptions. That makes governance harder, maintenance harder, security harder, and accountability harder. If the last two decades taught us to fear spaghetti code, the next few should teach us to fear spaghetti cognition, because this mess does not just execute. It changes shape while no one is looking.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="logo-title">Code and Consequences</p>
+        <p>Patch Murphy's software security guard post.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/channel/UCmwpVcnu1xoKUONJfnOeGPA" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/PatchMurphySec" target="_blank" rel="noopener">X (Patch)</a>
+        <a href="mailto:pmurphy@snakeeyessoftware.com">Contact</a>
+      </div>
+      <p class="tiny">© <span id="year"></span> Code and Consequences.</p>
+    </footer>
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>

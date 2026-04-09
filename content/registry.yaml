@@ -1,0 +1,116 @@
+# ContentEngine Registry — Single source of truth for all C&C content
+# Managed by: bun ~/.claude/skills/ContentEngine/Tools/Registry.ts
+
+entries:
+  - id: blog-lesson-01
+    title: "Test the weird stuff first"
+    source: "book/00 - The Wager.md"
+    platform: blog
+    format: lesson
+    status: published
+    published_date: "2024-11-12"
+    url: "https://codeandconsequences.com/software-security.html#origin"
+    slug: test-the-weird-stuff-first
+    path: "software-security.html"
+    description: "The 20 Questions disaster — edge cases, input validation, destructive testing"
+    security_concepts:
+      - input validation
+      - edge cases
+      - destructive testing
+    chapter_ref: "00"
+
+  - id: blog-lesson-02
+    title: "Never trust the client"
+    source: "book/05 - Never Trust The Client.md"
+    platform: blog
+    format: lesson
+    status: published
+    published_date: "2024-11-12"
+    url: "https://codeandconsequences.com/software-security.html#network"
+    slug: never-trust-the-client
+    path: "software-security.html"
+    description: "Malformed everything — packet spoofing, buffer overflows, trust boundaries"
+    security_concepts:
+      - client trust
+      - input validation
+      - server-side enforcement
+    chapter_ref: "05"
+
+  - id: blog-lesson-03
+    title: "Automate anything that steals focus"
+    source: "book/20 - Lessons Learned At 2 AM.md"
+    platform: blog
+    format: lesson
+    status: published
+    published_date: "2024-11-12"
+    url: "https://codeandconsequences.com/software-security.html#automation"
+    slug: automate-anything-that-steals-focus
+    path: "software-security.html"
+    description: "The J2EE wait game — automation as security through consistency"
+    security_concepts:
+      - automation
+      - consistency
+      - deployment security
+    chapter_ref: "20"
+
+  - id: video-intro-01
+    title: "Why Edge Cases Bite"
+    source: "book/00 - The Wager.md"
+    platform: youtube
+    format: intro-video
+    status: published
+    published_date: "2024-11-12"
+    url: "https://www.youtube.com/channel/UCmwpVcnu1xoKUONJfnOeGPA"
+    slug: why-edge-cases-bite
+    description: "Patch walks through the 20 Questions crash and the test cases it inspired"
+    security_concepts:
+      - edge cases
+      - testing
+    chapter_ref: "00"
+
+  - id: video-intro-02
+    title: "Never Trust the Client"
+    source: "book/05 - Never Trust The Client.md"
+    platform: youtube
+    format: intro-video
+    status: published
+    published_date: "2024-11-12"
+    url: "https://www.youtube.com/channel/UCmwpVcnu1xoKUONJfnOeGPA"
+    slug: never-trust-the-client-video
+    description: "Packet spoofing dramatized with doodles, plus mitigation strategies"
+    security_concepts:
+      - client trust
+      - network security
+    chapter_ref: "05"
+
+  - id: deck-security-primer
+    title: "Software Security: Why We Keep Shooting Ourselves in the Foot"
+    source: "presentation"
+    platform: talk
+    format: presentation-deck
+    status: published
+    published_date: "2024-11-12"
+    url: "https://gamma.app/docs/Software-Security-Why-We-Keep-Shooting-Ourselves-in-the-Foot-o3p62tknvmus4jt"
+    slug: software-security-primer-deck
+    description: "Overview deck covering the core themes from Code and Consequences"
+    security_concepts:
+      - software security overview
+      - secure development lifecycle
+
+  - id: blog-spaghetti-skills-01
+    title: "Spaghetti Skills"
+    source: "source-material/articles/spaghetti-skills/Spaghetti Skills Are The New Spaghetti Code.md"
+    platform: blog
+    format: article
+    status: published
+    published_date: "2026-04-08"
+    url: "https://www.codeandconsequences.com/content/published/blog/spaghetti-skills/"
+    slug: spaghetti-skills
+    path: "content/published/blog/spaghetti-skills/index.html"
+    description: "How software complexity moved from spaghetti code to API sprawl and then into prompts, agents, schedulers, wrapper scripts, and workflow debt."
+    security_concepts:
+      - software architecture
+      - api sprawl
+      - ai workflows
+      - evaluation loops
+      - operational traceability
