@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11233c" />
+      <stop offset="100%" stop-color="#08111f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="none" stroke="#f97316" stroke-width="2.5" />
+  <text
+    x="32"
+    y="38"
+    fill="#7dd3cf"
+    font-family="'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace"
+    font-size="19"
+    font-weight="700"
+    text-anchor="middle"
+  >
+    C&amp;C
+  </text>
+</svg>
